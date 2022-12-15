@@ -17,7 +17,7 @@ app.use('/api', productsRouter);
 const start = async () => {
   try {
     await mongoose
-      .connect(process.env.MONGO_URL, {
+      .connect('mongodb+srv://riot:riot@cluster0.wprmwtp.mongodb.net', {
         useNewUrlParser: true,
       })
       .then(() => console.log('db: ok'))
